@@ -1,6 +1,6 @@
 import { create, fromJson, toJson, equals } from "@bufbuild/protobuf";
+import { DurationSchema } from "@bufbuild/protobuf/wkt";
 import { ScheduleSchema } from "../gen/proto/schedule_pb.js";
-import { DurationSchema } from "../gen/proto/google/protobuf/wkt/index.js";
 
 // 1. Convert DurationJson to Duration
 const durationJson: string = "30.0000005s";
