@@ -1,0 +1,7 @@
+version: v1
+plugins:
+  # This plugin generates TypeScript types and helper functions.
+  - plugin: es
+    opt:
+      - target=ts
+    out: gen

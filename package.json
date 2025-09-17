@@ -1,0 +1,19 @@
+{
+  "name": "proto-duration-reproducer",
+  "version": "1.0.0",
+  "description": "Reproducer for google.protobuf.Duration with TypeScript and JSON",
+  "type": "module",
+  "scripts": {
+    "generate": "npx buf generate",
+    "start": "node --loader ts-node/esm src/main.ts"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.10.0"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.34.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

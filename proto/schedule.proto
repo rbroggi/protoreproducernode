@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package example.v1;
+
+import "google/protobuf/duration.proto";
+
+// A message representing a schedule with a specific delay.
+message Schedule {
+  // The delay before the schedule starts.
+  google.protobuf.Duration delay = 1;
+}
