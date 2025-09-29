@@ -36,4 +36,4 @@ console.log("Deserialized minimal Schedule:", minimalDeserializedSchedule);
 
 const minimalScheduleJsonOmitEmpty = {};
 const minimalDeserializedScheduleOmitEmpty = fromJson(ScheduleSchema, minimalScheduleJsonOmitEmpty);
-console.log("Deserialized minimal Schedule:", minimalDeserializedSchedule);
+console.log("Deserialized minimal Schedule:", minimalDeserializedScheduleOmitEmpty);
