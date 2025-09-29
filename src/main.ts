@@ -14,6 +14,11 @@ console.log("Converted Duration to DurationJson:", backToJson);
 // 3. Create a Schedule message
 const originalSchedule = create(ScheduleSchema, {
     delay: duration,
+    job: {},
+    startTime: { seconds: BigInt(1625079600), nanos: 0 }, // Example timestamp
+    endTime: { seconds: BigInt(1625166000), nanos: 0 },   // Example timestamp
+    retries: 3,
+    type: { case: "cs2", value: {rws: 1} } // Example CS2 type
 });
 console.log("Original Schedule:", originalSchedule);
 

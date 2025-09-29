@@ -7,6 +7,12 @@ import "google/protobuf/timestamp.proto";
 
 // A message representing a schedule with a specific delay.
 message Schedule {
+  message CS2 {
+    uint32 rws = 1;
+  }
+  message OW2 {
+    float rate = 1;
+  }
   // The delay before the schedule starts.
   google.protobuf.Duration delay = 1;
   Job job = 2;
@@ -14,6 +20,11 @@ message Schedule {
   google.protobuf.Timestamp start_time = 3;
   optional google.protobuf.Timestamp end_time = 4;
   optional uint32 retries = 5;
+
+  oneof type {
+    CS2 cs2 = 6;
+    OW2 ow2 = 7;
+  }
 }
 
 message Job {
