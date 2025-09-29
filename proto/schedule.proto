@@ -3,9 +3,19 @@ syntax = "proto3";
 package example.v1;
 
 import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
 
 // A message representing a schedule with a specific delay.
 message Schedule {
   // The delay before the schedule starts.
   google.protobuf.Duration delay = 1;
+  Job job = 2;
+  // optional start time for the schedule.
+  google.protobuf.Timestamp start_time = 3;
+  optional google.protobuf.Timestamp end_time = 4;
+  optional uint32 retries = 5;
+}
+
+message Job {
+  string id = 1;
 }

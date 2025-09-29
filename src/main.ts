@@ -28,3 +28,8 @@ console.log("Deserialized Schedule:", deserializedSchedule);
 // 6. Compare original and deserialized Schedule
 const areEqual = equals(ScheduleSchema, originalSchedule, deserializedSchedule);
 console.log(`Are the original and deserialized Schedule equal? ${areEqual ? "✅ Yes" : "❌ No"}`);
+
+// lets create a json without any optional fields and see how the deserialized Schedule looks like
+const minimalScheduleJson = {delay: "10s", job: {}};
+const minimalDeserializedSchedule = fromJson(ScheduleSchema, minimalScheduleJson);
+console.log("Deserialized minimal Schedule:", minimalDeserializedSchedule);
