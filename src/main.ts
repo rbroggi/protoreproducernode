@@ -33,3 +33,7 @@ console.log(`Are the original and deserialized Schedule equal? ${areEqual ? "✅
 const minimalScheduleJson = {delay: "10s", job: {}};
 const minimalDeserializedSchedule = fromJson(ScheduleSchema, minimalScheduleJson);
 console.log("Deserialized minimal Schedule:", minimalDeserializedSchedule);
+
+const minimalScheduleJsonOmitEmpty = {};
+const minimalDeserializedScheduleOmitEmpty = fromJson(ScheduleSchema, minimalScheduleJsonOmitEmpty);
+console.log("Deserialized minimal Schedule:", minimalDeserializedSchedule);
